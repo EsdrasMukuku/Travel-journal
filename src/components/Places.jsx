@@ -1,7 +1,31 @@
+import MountFujiImage from '../components/images/MountFujiImage';
+import SydneyOperaHouseImage from '../components/images/SydneyOperaHouseImage';
+import GeirangerjordImage from '../components/images/GeirangerjordImage';
+
 const Places = (place) => {
+
+    let ImageComponent;
+
+  // Determine which image component to use based on place title
+  switch (place.title) {
+    case 'Mount Fuji':
+      ImageComponent = MountFujiImage;
+      break;
+    case 'Sydney Opera House':
+      ImageComponent = SydneyOperaHouseImage;
+      break;
+    case 'Geirangerjord':
+      ImageComponent = GeirangerjordImage;
+      break;
+    default:
+      ImageComponent = null;
+      break;
+  }
   return (
     <div className="flex gap-[1.25rem] px-6">
-        <img src={place.imageUrl} alt={`an image of ${place.imageUrl}`} className="w-[7.875rem] h-[10.5rem]"/>
+         <div >
+        {ImageComponent && <ImageComponent />}
+      </div>
       <div className="flex flex-col justify-center">
 
         <div className="flex gap-1">
