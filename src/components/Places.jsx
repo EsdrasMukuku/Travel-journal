@@ -23,7 +23,7 @@ const Places = (place) => {
   }
   return (
     <div className="flex gap-[1.25rem] px-6">
-         <div className="w-[7.875rem] h-[10.5rem]">
+         <div >
         {ImageComponent && <ImageComponent />}
       </div>
       <div className="flex flex-col justify-center">
