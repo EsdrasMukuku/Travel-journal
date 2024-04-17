@@ -1,6 +1,8 @@
 import MountFujiImage from '../components/images/MountFujiImage';
 import SydneyOperaHouseImage from '../components/images/SydneyOperaHouseImage';
 import GeirangerjordImage from '../components/images/GeirangerjordImage';
+import LocationPointer from '../../public/assets/Fill 219.png'
+
 
 const Places = (place) => {
 
@@ -29,7 +31,7 @@ const Places = (place) => {
       <div className="flex flex-col justify-center">
 
         <div className="flex gap-1">
-          <img src="../../public/assets/Fill 219.png" alt="" className="w-[12px] h-[15.55px] mt-1"/>
+          <img src={LocationPointer} alt="" className="w-[12px] h-[15.55px] mt-1"/>
           <p className="text-regular tracking-wider ml-2 mr-5">{place.location} </p>
           <a href={place.googleMapsUrl} className="text-gray underline">View on Google Maps</a>
         </div>
