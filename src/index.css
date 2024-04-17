@@ -5,5 +5,12 @@
 @layer base {
   html {
     font-family: "Inter", sans-serif;
+    color: #2B283A;
+  }
+  #root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
 }
